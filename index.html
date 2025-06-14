@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet" />
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <button id="menu-button">
+        <img src="./images/icon-menu.svg" alt="menu" />
+      </button>
+      <img src="./images/logo.svg" alt="sneakers logo" />
+      <nav id="desktop-nav" aria-label="navigation bar">
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <div id="card-btn-wrapper">
+        <button id="cart">
+          <svg id="cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#69707D" fill-rule="nonzero" />
+          </svg>
+        </button>
+        <p id="little-cart-num" class="hidden">0</p>
+
+        <div id="cart-card" class="hidden">
+          <h2>Cart</h2>
+          <p id="empty-cart">Your cart is empty.</p>
+
+          <div id="full-cart">
+            <div>
+              <img src="./images/image-product-1.jpg" alt="product img" id="cart-prod-img" />
+              <p id="cart-info">Fall Limited Edition Sneakers <br>$125.00 x <b id="how-many">3</b> <b id="total-price">$375.00</b></p>
+              <button id="delete-btn">
+                <img src="./images/icon-delete.svg" alt="delete" id="delete-img" />
+            </div>
+            <button id="checkout">Checkout</button>
+            </button>
+
+          </div>
+        </div>
+      </div>
+      <img src="./images/image-avatar.png" alt="avatar" id="avatar" tabindex="0" />
+    </div>
+  </header>
+
+  <aside id="menu-panel">
+    <button id="close-menu">
+      <img src="./images/icon-close.svg" alt="close menu" />
+    </button>
+    <nav id="mobile-menu">
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <div id="overlay"></div>
+
+  <main id="page-content">
+
+    <article id="img-gallery">
+      <button id="previous">
+        <img src="./images/icon-previous.svg" alt="previous" />
+      </button>
+      <button id="next">
+        <img src="./images/icon-next.svg" alt="next" />
+      </button>
+
+      <img src="./images/image-product-1.jpg" alt="product image" id="prod-img" />
+
+      <div id="thumbnails" tabindex="0">
+        <div class="thumbnails-wrapper selected">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail" class="thumbnails-imgs mouse" tabindex="0" role="button" aria-label="select image product">
+        </div>
+        <div class="thumbnails-wrapper">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail" class="thumbnails-imgs" tabindex="0" role="button" aria-label="select image product">
+        </div>
+        <div class="thumbnails-wrapper">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail" class="thumbnails-imgs" tabindex="0" role="button" aria-label="select image product">
+        </div>
+        <div class="thumbnails-wrapper">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail" class="thumbnails-imgs" tabindex="0" role="button" aria-label="select image product">
+        </div>
+      </div>
+    </article>
+
+    <article id="text">
+      <h1>SNEAKER COMPANY</h1>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p id="description">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they’ll withstand everything the
+        weather can offer.
+      </p>
+      <div id="price">
+        <div>
+          <p id="actual">$125.00</p>
+          <p id="discount">50%</p>
+        </div>
+
+        <p id="old">$250.00</p>
+      </div>
+
+      <section id="add-cart-wrapper">
+        <div id="item-num">
+          <button id="minus" aria-label="decrease quantity">
+            <img src="./images/icon-minus.svg" alt="minus" />
+          </button>
+          <p id="num">0</p>
+          <button id="plus" aria-label="increase quantity">
+            <img src="./images/icon-plus.svg" alt="plus" />
+          </button>
+        </div>
+        <button id="add-cart" aria-label="add to cart">
+          <svg id="black-cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="hsl(220, 13%, 13%)" fill-rule="nonzero" />
+          </svg>
+          Add to cart
+        </button>
+      </section>
+    </article>
+  </main>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      href="https://github.com/domdem-dev" target="_blank">domdem-dev</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
