@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL:
+- Live Site URL: https://ecommerce-product-page-example.netlify.app/
 
 
 ### Built with
